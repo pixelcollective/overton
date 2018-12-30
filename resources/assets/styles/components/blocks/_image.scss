@@ -1,0 +1,18 @@
+@media (max-width: 400px) {
+  div.wp-block-image,
+  div.wp-block-image.alignwide {
+    @apply inline-block w-full mx-auto my-0 p-0;
+
+    *[class*="align"] {
+      @apply inline-block w-full mx-auto;
+
+      & img {
+        @apply inline-block w-full mx-0 py-0;
+      }
+
+      figcaption {
+        @apply inline-block mx-auto w-full px-1;
+      }
+    }
+  }
+}

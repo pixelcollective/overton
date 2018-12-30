@@ -1,0 +1,19 @@
+/** 👩🏼‍🎤 */
+@tailwind preflight;
+
+/** Import variables */
+@import "common/variables";
+
+@tailwind components;
+
+@import "common/global";
+@import "components/wp";
+
+/** layouts */
+@import "layouts/nav";
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/content";
+
+@tailwind utilities;

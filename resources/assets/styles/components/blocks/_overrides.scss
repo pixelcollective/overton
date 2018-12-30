@@ -1,0 +1,7 @@
+main.main .wp-block-kebo-code.kebo-code {
+  @apply mb-0;
+
+  & * {
+    @apply font-mono;
+  }
+}

@@ -1,0 +1,133 @@
+main.main {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  > span,
+  > a,
+  table {
+    @apply block max-w-full w-md ml-auto mr-auto py-0 px-2 font-sans;
+  }
+
+  pre,
+  .wp-block-code,
+  .wp-block-verse,
+  code,
+  ul,
+  ol {
+    @apply font-mono overflow-hidden;
+  }
+
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6 {
+    @apply leading-tight;
+  }
+
+  > h1 {
+    @apply pt-12 pb-12;
+  }
+
+  > h2,
+  > h3 {
+    @apply pt-4 pb-4 uppercase;
+  }
+
+  > h4,
+  > h5,
+  > h6 {
+    @apply my-0 pt-2 pb-2 uppercase;
+  }
+
+  > ol,
+  > ol ol {
+    @apply my-0 pl-12 pr-0 ml-auto;
+  }
+
+  > ol ol {
+    @apply pl-8;
+  }
+
+  > ul,
+  > ul ul {
+    @apply my-0 pl-0 pr-0 ml-auto;
+  }
+
+  > ul ul {
+    @apply pl-4;
+  }
+
+  > ul li,
+  > ol li,
+  > ul ul li,
+  > ol ol li {
+    display: list-item;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  > ul:not([class*="columns-"]):not(.is-grid) {
+    li::before,
+    li ul li::before {
+      content: "👉";
+    }
+  }
+
+  > p,
+  > ul:not([class*="wp-block"]) li,
+  > ol:not([class*="wp-block"]) li,
+  > pre,
+  > span,
+  > table * {
+    @apply text-base leading-normal;
+  }
+
+  > p {
+    @apply pt-2 pb-2;
+  }
+
+  > h1 + p,
+  > h2 + p,
+  > h3 + p,
+  > h4 + p,
+  > h5 + p,
+  > h6 + p,
+  > h1 + *:not([class*="wp-block"]) {
+    @apply pt-0;
+  }
+
+  /** buttons */
+  a:not(.wp-block-button__link) {
+    @apply text-primary no-underline border-b border-transparent;
+
+    transition: 0.2s ease;
+
+    &:hover {
+      @apply border-primary;
+    }
+  }
+
+  pre {
+    @apply w-full overflow-x-scroll mt-4 mb-4;
+  }
+
+  code {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+  }
+
+  .wp-block-code,
+  :not(pre) code {
+    background-color: #22292ff1;
+    color: white;
+    border-radius: 3px;
+  }
+}

@@ -1,0 +1,48 @@
+main.main {
+  > *:not(.alignwide,.alignfull,.alignleft,.alignright,.aligncenter) {
+    @apply max-w-lg mt-4 mb-4 ml-auto mr-auto pt-4 pb-4 px-4;
+  }
+
+  > [class*="wp-block-"].alignwide {
+    @apply max-w-xl ml-auto mr-auto mt-10 mb-10;
+  }
+
+  > [class*="wp-block-"].alignfull {
+    @apply max-w-full mx-0 mt-10 mb-10 px-0;
+  }
+
+  > [class*="wp-block-"].alignleft > * {
+    @apply float-left mr-4 mt-0 mb-0;
+  }
+
+  > [class*="wp-block-"].alignright > * {
+    @apply float-right ml-4 mt-0 mb-0;
+  }
+
+  > [class*="wp-block-"].alignleft,
+  > [class*="wp-block-"].alignright,
+  > [class*="wp-block-"].aligncenter {
+    @apply mx-auto pt-4 pb-4;
+  }
+
+  > .wp-block-cover.alignright {
+    @apply float-right mt-8 mb-8;
+  }
+
+  > .wp-block-cover.alignleft {
+    @apply float-left mt-8 mb-8;
+  }
+
+  > .wp-block-cover.alignleft,
+  > .wp-block-cover.alignright {
+    > p {
+      @apply mx-0;
+    }
+  }
+
+  @media (max-width: sm) {
+    > [class*="wp-block-"] {
+      @apply max-w-full;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.container {
+  @apply max-w-lg mx-auto px-8;
+}
+
+@media (min-width: 576px) {
+  .container {
+    @apply max-w-sm px-8;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    @apply max-w-md px-8;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    @apply max-w-lg;
+  }
+}

@@ -1,0 +1,46 @@
+main.main {
+  > .wp-block-cover.alignfull,
+  > .wp-block-cover.alignwide,
+  > .wp-block-image.alignfull,
+  > .wp-block-image.alignwide {
+    @apply py-4;
+  }
+
+  > .wp-block-cover.alignleft,
+  > .wp-block-cover.alignright {
+    @apply max-w-full w-full mx-0;
+
+    clear: both;
+
+    ::after {
+      clear: both;
+      content: "";
+    }
+  }
+
+  > .wp-block-cover.aligncenter {
+    @apply mx-auto;
+
+    clear: both;
+    content: "";
+  }
+
+  @screen md {
+    > .wp-block-cover.alignleft,
+    > .wp-block-cover.alignright {
+      @apply max-w-xs mx-8 py-8;
+    }
+
+    > .wp-block-cover.alignleft {
+      @screen md {
+        @apply ml-0 mr-8;
+      }
+    }
+
+    > .wp-block-cover.alignright {
+      @screen md {
+        @apply mr-0 ml-8;
+      }
+    }
+  }
+}

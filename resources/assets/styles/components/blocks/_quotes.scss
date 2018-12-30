@@ -1,0 +1,91 @@
+main.main {
+  > blockquote.wp-block-quote,
+  > blockquote.wp-block-quote.is-large,
+  > blockquote.wp-block-quote.is-style-large {
+    @apply block mt-0 mb-0 ml-auto mr-auto px-8;
+
+    @media (max-width: sm) {
+      > * {
+        @apply text-lg;
+      }
+    }
+  }
+
+  > figure.wp-block-pullquote {
+    @apply mx-auto mt-0 mb-0;
+  }
+
+  > figure.wp-block-pullquote.aligncenter {
+    @apply mt-8 mb-8 px-8;
+
+    & > blockquote {
+      & > p {
+        @apply text-xl italic;
+      }
+    }
+  }
+
+  > figure.wp-block-pullquote.alignwide {
+    @apply max-w-xl w-xl py-16 px-16 mt-8 mb-8;
+
+    max-width: 100vw;
+
+    > blockquote {
+      @apply max-w-full w-xl mx-0;
+
+      > * {
+        @apply inline-block w-full;
+      }
+    }
+  }
+
+  > figure.wp-block-pullquote.alignfull {
+    @apply max-w-full w-full px-12 py-16 my-16 bg-black;
+
+    > blockquote {
+      @apply w-full mx-auto;
+
+      max-width: 1200px;
+
+      > * {
+        @apply inline-block w-full text-white;
+      }
+    }
+  }
+
+  > blockquote.wp-block-quote > cite,
+  > figure.wp-block-pullquote > blockquote > cite {
+    @apply
+      inline-block pt-4 pb-4
+      font-sans uppercase roman font-semibold tracking-tight;
+
+    &::before {
+      content: "\2014 ";
+    }
+  }
+
+  > figure.wp-block-pullquote.alignleft,
+  > figure.wp-block-pullquote.alignright {
+    @apply block max-w-lg pt-4 pb-4;
+
+    > blockquote {
+      @apply max-w-xs mt-12 mb-12;
+    }
+  }
+
+  > figure.wp-block-pullquote.alignleft {
+    > blockquote {
+      @apply ml-0 mr-8 text-left;
+    }
+  }
+
+  > figure.wp-block-pullquote.alignright {
+    > blockquote {
+      @apply mr-0 ml-8 text-right;
+    }
+  }
+
+  > figure.wp-block-pullquote[class*="align"] cite {
+    @apply mt-4 mb-0;
+  }
+}

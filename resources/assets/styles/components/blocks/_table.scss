@@ -1,0 +1,25 @@
+main.main table.wp-block-table {
+  @apply table table-auto w-full max-w-md mx-auto my-8 overflow-x-scroll;
+
+  tr {
+    @apply table-row;
+
+    td {
+      @apply table-cell;
+    }
+  }
+
+  tbody tr:first-child {
+    @apply mb-8;
+
+    > td {
+      @apply font-semibold uppercase;
+    }
+  }
+
+  tbody tr:not:first-child {
+    > td {
+      @apply my-8;
+    }
+  }
+}

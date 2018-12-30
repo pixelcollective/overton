@@ -1,0 +1,47 @@
+.top-nav {
+  @apply flex items-center justify-between flex-wrap bg-black p-6;
+}
+
+.top-nav .title {
+  @apply
+    flex items-center flex-no-shrink mr-6
+    uppercase text-white;
+
+  svg {
+    @apply fill-current h-8 w-8 mr-2;
+  }
+}
+
+.top-nav .hamburger {
+  button {
+    @apply
+      flex items-center px-3 py-2 border rounded
+      text-teal-lighter border-teal-light;
+  }
+
+  svg {
+    @apply fill-current h-3 w-3;
+  }
+}
+
+.top-nav .nav {
+  @apply flex flex-grow w-full self-end justify-between flex w-auto;
+
+  li {
+    @apply list-reset ml-2;
+  }
+
+  li a {
+    @apply inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white no-underline;
+  }
+
+  li a:hover {
+    @apply border-transparent text-black bg-white;
+  }
+}
+
+.top-nav .nav:first-child() {
+  li {
+    @apply ml-0;
+  }
+}
